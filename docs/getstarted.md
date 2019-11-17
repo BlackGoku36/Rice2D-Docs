@@ -58,7 +58,7 @@ Create `window.json` inside `Assets`, this is used to define window properties.
 <!-- tabs:start -->
 #### **window.json**
 ```json
-{   
+{
     "name":"Empty Rice2D",
     "width": 720,
     "height": 450,
@@ -81,9 +81,9 @@ import rice2d.App;
 
 class Main {
 
-	public static function main() {
-		new App("");// 1
-	}
+    public static function main() {
+        new App("");// 1
+    }
 }
 ```
 1. Create new App with no scene
@@ -124,9 +124,9 @@ import rice2d.App;
 
 class Main {
 
-	public static function main() {
-		new App("scene");// 1
-	}
+    public static function main() {
+        new App("scene");// 1
+    }
 }
 ```
 1. We define scene in parameter of `new App()`.
@@ -142,7 +142,7 @@ Add blue guy to `Assets` folder and open `scene.json`
 {
     "name": "MyScene",
     "objects":[
-        {   
+        {
             "name": "object",
             "x": 150,
             "y": 150,
@@ -191,7 +191,7 @@ class ScriptTest extends rice2d.Script{
 
     public function new() {
         super();
-        // 1  
+        // 1
         notifyOnInit(function(){
             trace("Init!");
         });
@@ -222,7 +222,7 @@ Now to attach `ScriptTest.hx` to our object:
 {
     "name": "MyScene",
     "objects":[
-        {   
+        {
             "name": "object",
             "x": 150,
             "y": 150,

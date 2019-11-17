@@ -56,7 +56,7 @@ To add rigid body to your object, simply add:
         "playerAnim.png", "ground.png"
     ],
     "objects":[
-        {   
+        {
             "name": "player",
             "x":10,
             "y":10,
