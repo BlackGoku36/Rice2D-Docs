@@ -1,0 +1,51 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" title="d" href="./themeable-dark.css">
+  <title>Rice2D-Docs</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./docsify-edit-on-github.js"></script>
+  <script>
+    window.$docsify = {
+      name: '<img src="assets/docslogo.png">',
+      repo: 'https://github.com/BlackGoku36/Rice2D-Docs',
+      loadSidebar: true,
+      subMaxLevel: 1,
+      coverpage: true,
+    //   ga    : 'UA-145916081-1',
+      search:{
+        noData: "Sorry, can't find what you searched for :(",
+      },
+      tabs: {
+      },
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/BlackGoku36/Rice2D-Docs/tree/master',
+          "",
+          "📝 EDIT ON GITHUB"
+        )
+      ]
+    }
+    </script>
+    <script src="./docsify.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> -->
+    <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+    <!-- <script src="./prism-bash.min.js"></script> -->
+    <!-- <script src="./prism-haxe.min.js"></script> -->
+    <!-- <script src="./prism-rust.min.js"></script> -->
+    <!-- <script src="./search.min.js"></script> -->
+    <!-- <script src="./switchtheme.js"></script> -->
+    <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
+</body>
+</html>
