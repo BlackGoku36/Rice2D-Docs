@@ -48,6 +48,8 @@ and finally add `Rice2D` library to `khafile.js`:
 project.addLibrary('rice2d');
 ```
 
+---
+
 ## Window
 Window and it properties is defined in `window.json`, engine will automatically pick up `window.json` in `Assets` folder.
 
@@ -90,6 +92,8 @@ class Main {
 Now, if you run it, you should get black window:
 
 ![](/../assets/doc1.png ':size=600')
+
+---
 
 ## Scene
 
@@ -163,6 +167,8 @@ Add blue guy to `Assets` folder and open `scene.json`
 Now playing, we should get:
 
 ![](/../assets/doc2.png ':size=600')
+
+---
 
 ## Script
 
