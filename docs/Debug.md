@@ -1,5 +1,9 @@
 # Debug
 
+Version: `2019.11.17`
+
+---
+
 If you are using Git, then add [ZUI](https://github.com/armory3d/zui) submodule to your `Libraries`
 and add following to your khafile.js
 ```

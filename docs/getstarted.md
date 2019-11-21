@@ -1,5 +1,7 @@
 # Get Started
 
+Version: `2019.11.17`
+
 ---
 
 Table of contents:

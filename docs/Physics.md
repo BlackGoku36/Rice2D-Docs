@@ -1,5 +1,9 @@
 # Physics
 
+Version: `2019.11.17`
+
+---
+
 Rice2D uses Austin East 's [Echo library](https://austineast.dev/echo/) for physics.
 
 
