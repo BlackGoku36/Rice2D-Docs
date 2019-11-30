@@ -178,16 +178,16 @@ Script is code for an object functionality, multiple scripts can be attached to 
 
 Open `khafile.js` and add:
 ```
-project.addParameter('rice');
-project.addParameter("--macro keep('rice')");
+project.addParameter('scripts');
+project.addParameter("--macro keep('scripts')");
 ```
 
-And now create folder `rice` inside `Sources` and inside this create `ScriptTest.hx`
+And now create folder `scripts` inside `Sources` and inside this create `ScriptTest.hx`
 
 <!-- tabs:start -->
 #### **ScriptTest.hx**
 ```haxe
-package rice;
+package scripts;
 
 class ScriptTest extends rice2d.Script{
 
