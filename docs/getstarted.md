@@ -108,12 +108,17 @@ Scene is defined in json format ofc! Let create `scene.json`, unlike window, sce
 {
     "name": "MyScene",
     "objects":[],
-    "assets":[]
+    "assets":{
+        "images": [],
+        "fonts": []
+    }
 }
 ```
 * **name**: Name of scene.
 * **objects**: List of objects.
 * **assets**: List of assets.
+    * **images**: List of images
+    * **fonts**: List of fonts
 <!-- tabs:end -->
 
 This is basics structure of the scene. Now, let define our scene in `Main.hx`, it easy peasy!
@@ -154,7 +159,10 @@ Add blue guy to `Assets` folder and open `scene.json`
             "spriteRef": "blueguy"
         }
     ],
-    "assets":["blueguy.png"]
+    "assets":{
+        "images": ["blueguy.png"],
+        "fonts": []
+    }
 }
 ```
 * **objects.name**: Name of object.
