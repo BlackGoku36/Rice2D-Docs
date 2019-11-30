@@ -151,7 +151,7 @@ Add blue guy to `Assets` folder and open `scene.json`
             "y": 150,
             "width": 256,
             "height": 256,
-            "spriteRef": "blueguy.png"
+            "spriteRef": "blueguy"
         }
     ],
     "assets":["blueguy.png"]
@@ -202,8 +202,9 @@ class ScriptTest extends rice2d.Script{
             trace("Update!");
         });
         // 3
-        notifyOnRender(function(g:kha.graphics2.Graphics){
-            g.fillTriangle(350, 350, 250, 350, 350, 250);
+        notifyOnRender(function(g:kha.Canvas){
+            var g2 = g.g2;
+            g2.fillTriangle(350, 350, 250, 350, 350, 250);
         });
 
     }
@@ -230,7 +231,7 @@ Now to attach `ScriptTest.hx` to our object:
             "y": 150,
             "width": 256,
             "height": 256,
-            "spriteRef": "blueguy.png",
+            "spriteRef": "blueguy",
             "scripts": [
                 {
                     "name": "OurScript",
@@ -239,7 +240,10 @@ Now to attach `ScriptTest.hx` to our object:
             ]
         }
     ],
-    "assets":["blueguy.png"]
+    "assets":{
+        "images": ["blueguy.png"],
+        "fonts": []
+    }
 }
 ```
 * **objects.scripts.name**: Name of script.
