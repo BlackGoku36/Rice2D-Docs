@@ -23,7 +23,6 @@ Empty
     ├── Assets
     ├── Libraries
     ├── README.md
-    ├── Kha
     ├── Sources
     │   └── Main.hx
     └── khafile.js
@@ -32,7 +31,7 @@ Empty
 To install `Rice2D`.
 <!-- tabs:start -->
 
-#### **Git**
+#### **Git(Recommended)**
 Navigate to `Libraries` folder and add `Rice2D` submodule.
 ```
 git submodule add https://github.com/BlackGoku36/Rice2D
@@ -64,13 +63,15 @@ Create `window.json` inside `Assets`, this is used to define window properties.
     "name":"Empty Rice2D",
     "width": 720,
     "height": 450,
-    "windowMode": 0
+    "windowMode": 0,
+    "clearColor": [100, 155, 255, 255]
 }
 ```
 * **name**: Title for window
 * **width**: Width of window
 * **height**: Height of window
 * **windowMode**: Mode of window, 0 is windowed screen and 1 is fullscreen.
+* **clearColor**: Background color of window(RGBA, 0->255).
 <!-- tabs:end -->
 
 Now open `Main.hx`.
@@ -150,8 +151,7 @@ Add blue guy to `Assets` folder and open `scene.json`
             "y": 150,
             "width": 256,
             "height": 256,
-            "spriteRef": "blueguy.png",
-            "scripts": []
+            "spriteRef": "blueguy.png"
         }
     ],
     "assets":["blueguy.png"]
