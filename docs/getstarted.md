@@ -156,7 +156,7 @@ Add blue guy to `Assets` folder and open `scene.json`
             "y": 150,
             "width": 256,
             "height": 256,
-            "spriteRef": "blueguy"
+            "spriteRef": "blueguy.png"
         }
     ],
     "assets":{
@@ -239,7 +239,7 @@ Now to attach `ScriptTest.hx` to our object:
             "y": 150,
             "width": 256,
             "height": 256,
-            "spriteRef": "blueguy",
+            "spriteRef": "blueguy.png",
             "scripts": [
                 {
                     "name": "OurScript",
