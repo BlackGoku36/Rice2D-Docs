@@ -1,6 +1,6 @@
 # Get Started
 
-Version: `2019.11.17`
+Version: `2020.1.0`
 
 ---
 
@@ -24,6 +24,7 @@ Empty
     ├── Libraries
     ├── README.md
     ├── Sources
+    │   ├─ scripts
     │   └── Main.hx
     └── khafile.js
 ```
@@ -108,17 +109,12 @@ Scene is defined in json format ofc! Let create `scene.json`, unlike window, sce
 {
     "name": "MyScene",
     "objects":[],
-    "assets":{
-        "images": [],
-        "fonts": []
-    }
+    "assets":[]
 }
 ```
 * **name**: Name of scene.
 * **objects**: List of objects.
 * **assets**: List of assets.
-    * **images**: List of images
-    * **fonts**: List of fonts
 <!-- tabs:end -->
 
 This is basics structure of the scene. Now, let define our scene in `Main.hx`, it easy peasy!
@@ -156,13 +152,17 @@ Add blue guy to `Assets` folder and open `scene.json`
             "y": 150,
             "width": 256,
             "height": 256,
-            "spriteRef": "blueguy.png"
+            "animated": true,
+            "spriteRef": "blueguy"
         }
     ],
-    "assets":{
-        "images": ["blueguy.png"],
-        "fonts": []
-    }
+    "assets":[
+        {
+            "name": "blueguy",
+            "type": 0,
+            "path":"blueguy.png"
+        }
+    ]
 }
 ```
 * **objects.name**: Name of object.
@@ -170,8 +170,12 @@ Add blue guy to `Assets` folder and open `scene.json`
 * **objects.y**: Y position of object.
 * **objects.width**: Width of object.
 * **objects.height**: Height of object.
+* **objects.animated**: If true, it will be subscale of the image(used for spritesheet animation), else normal scaled image.
 * **objects.spriteRef**: Sprite reference of object in Assets.
-* **assets**: Asset reference.
+* **assets**: List of assets.
+* **assets.name**: Name of asset.
+* **assets.type**: Type of asset (Image -> 0, Font -> 1, Sound -> 2, Blob -> 3).
+* **assets.path**: path of asset (Path start at inside of `Assets` folder).
 <!-- tabs:end -->
 
 Now playing, we should get:
@@ -239,7 +243,8 @@ Now to attach `ScriptTest.hx` to our object:
             "y": 150,
             "width": 256,
             "height": 256,
-            "spriteRef": "blueguy.png",
+            "animated": true,
+            "spriteRef": "blueguy",
             "scripts": [
                 {
                     "name": "OurScript",
@@ -248,10 +253,13 @@ Now to attach `ScriptTest.hx` to our object:
             ]
         }
     ],
-    "assets":{
-        "images": ["blueguy.png"],
-        "fonts": []
-    }
+    "assets":[
+        {
+            "name": "blueguy",
+            "type": 0,
+            "path":"blueguy.png"
+        }
+    ]
 }
 ```
 * **objects.scripts.name**: Name of script.
