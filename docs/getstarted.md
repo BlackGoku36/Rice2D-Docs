@@ -1,6 +1,6 @@
 # Get Started
 
-Version: `2020.1.0`
+Version: `2020.5.0`
 
 ---
 
@@ -53,29 +53,9 @@ project.addLibrary('rice2d');
 ---
 
 ## Window
-Window and it properties is defined in `window.json`, engine will automatically pick up `window.json` in `Assets` folder.
 
-Create `window.json` inside `Assets`, this is used to define window properties.
+1. Open `Main.hx` in `Source` folder.
 
-<!-- tabs:start -->
-#### **window.json**
-```json
-{
-    "name":"Empty Rice2D",
-    "width": 720,
-    "height": 450,
-    "windowMode": 0,
-    "clearColor": [100, 155, 255, 255]
-}
-```
-* **name**: Title for window
-* **width**: Width of window
-* **height**: Height of window
-* **windowMode**: Mode of window, 0 is windowed screen and 1 is fullscreen.
-* **clearColor**: Background color of window(RGBA, 0->255).
-<!-- tabs:end -->
-
-Now open `Main.hx`.
 <!-- tabs:start -->
 #### **Main.hx**
 ```haxe
@@ -86,22 +66,28 @@ import rice2d.App;
 class Main {
 
     public static function main() {
-        new App("");// 1
+        new App("Empty Rice2D", 720, 450, "");// 1
     }
 }
 ```
-1. Create new App with no scene
+* App(Title, width, height, clearColor, windowMode, scene)
+    * **Title**: Title of the window.
+    * **width**: Width of window.
+    * **height**: Height of window.
+    * **clearColor**: Background color (It is optional, it defaults to white).
+    * **windowMode**: Mode of window, i.e, windowed or full-screen (It is optional, it defaults to windowed).
+    * **scene**: json file of the scene.
 <!-- tabs:end -->
 
-Now, if you run it, you should get black window:
-
-![](/../assets/doc1.png ':size=600')
+Now, if you run it, you should get window with white screen.
 
 ---
 
 ## Scene
 
-Scene is defined in json format ofc! Let create `scene.json`, unlike window, scene's json can have whatever name you want.
+Scene is defined in json format.
+
+1. Create `scene.json`.
 
 <!-- tabs:start -->
 #### **scene.json**
@@ -117,7 +103,7 @@ Scene is defined in json format ofc! Let create `scene.json`, unlike window, sce
 * **assets**: List of assets.
 <!-- tabs:end -->
 
-This is basics structure of the scene. Now, let define our scene in `Main.hx`, it easy peasy!
+This is basics structure of the scene. Now, let define our scene in `Main.hx`.
 
 <!-- tabs:start -->
 #### **Main.hx**
@@ -129,11 +115,10 @@ import rice2d.App;
 class Main {
 
     public static function main() {
-        new App("scene");// 1
+        new App("Empty Rice2D", 720, 450, "scene");// 1
     }
 }
 ```
-1. We define scene in parameter of `new App()`.
 <!-- tabs:end -->
 
 And this is how you define a scene, now let add [blue guy](https://github.com/BlackGoku36/Rice2D-Empty/blob/master/Assets/blueguy.png) from Lewis Lepton tutorial to our scene.
@@ -159,8 +144,7 @@ Add blue guy to `Assets` folder and open `scene.json`
     "assets":[
         {
             "name": "blueguy",
-            "type": 0,
-            "path":"blueguy.png"
+            "type": 0
         }
     ]
 }
@@ -175,7 +159,6 @@ Add blue guy to `Assets` folder and open `scene.json`
 * **assets**: List of assets.
 * **assets.name**: Name of asset.
 * **assets.type**: Type of asset (Image -> 0, Font -> 1, Sound -> 2, Blob -> 3).
-* **assets.path**: path of asset (Path start at inside of `Assets` folder).
 <!-- tabs:end -->
 
 Now playing, we should get:
@@ -256,8 +239,7 @@ Now to attach `ScriptTest.hx` to our object:
     "assets":[
         {
             "name": "blueguy",
-            "type": 0,
-            "path":"blueguy.png"
+            "type": 0
         }
     ]
 }
