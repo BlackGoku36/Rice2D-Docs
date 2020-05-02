@@ -1,5 +1,4 @@
 * [Get Started](docs/getstarted.md)
-* [UI](docs/UI.md)
 * [Debug](docs/Debug.md)
 
 ---
